@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>23f3001803 — Portfolio</title>
+  <meta name="description" content="Portfolio of projects and work by 23f3001803.">
+  <style>
+    :root { --bg:#ffffff; --fg:#1b1f24; --muted:#5b6570; --card:#f4f6f8; --line:#d9dee3; --accent:#2457c5; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#10141a; --fg:#e6e9ed; --muted:#9aa5b1; --card:#181e26; --line:#2a323c; --accent:#7aa2f7; }
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg);
+           font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    main { max-width:760px; margin:0 auto; padding:56px 20px 80px; }
+    h1 { font-size:2rem; margin:0 0 4px; }
+    h2 { font-size:1.15rem; margin:44px 0 12px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+    .tag { color:var(--muted); margin:0 0 20px; }
+    a { color:var(--accent); }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin:0 0 14px; }
+    .card h3 { margin:0 0 4px; font-size:1.05rem; }
+    .card p { margin:6px 0 0; color:var(--muted); }
+    .chips { margin-top:10px; display:flex; flex-wrap:wrap; gap:6px; }
+    .chips span { font-size:.8rem; padding:2px 9px; border:1px solid var(--line); border-radius:999px; color:var(--muted); }
+    footer { margin-top:48px; color:var(--muted); font-size:.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Portfolio</h1>
+    <p class="tag">Projects and work by <strong>23f3001803</strong></p>
+    <p>I build small, working software and write up what I learn along the way.
+       Below is a selection of things I have built and deployed.</p>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+
+    <article class="card">
+      <h3>Layered Configuration Service</h3>
+      <p>A FastAPI service that merges four configuration layers (hardcoded defaults, an
+         environment-specific YAML file, a <code>.env</code> file and OS environment variables)
+         and then applies per-request overrides passed as query parameters. Values are
+         type-coerced, aliases such as <code>NUM_WORKERS</code> are resolved, and secrets are
+         always masked in the response.</p>
+      <div class="chips"><span>Python</span><span>FastAPI</span><span>YAML</span><span>CORS</span><span>Render</span></div>
+      <p><a href="https://config-service-6jrw.onrender.com/effective-config">Live endpoint</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Git History Forensics</h3>
+      <p>Rebuilt a repository from a <code>git fast-import</code> stream and used
+         <code>git log -p</code> and <code>git log -S</code> to find the exact commit that
+         introduced a leaked token, then separated it from the later commit that rotated it.</p>
+      <div class="chips"><span>Git</span><span>Shell</span></div>
+    </article>
+
+    <article class="card">
+      <h3>Data and Search Exercises</h3>
+      <p>Cosine-similarity ranking over precomputed embeddings with NumPy, CSV revenue
+         analysis, JSON repair, and a shell script that reorganizes files by category while
+         handling spaces and Unicode paths.</p>
+      <div class="chips"><span>Python</span><span>NumPy</span><span>Bash</span></div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <!--email_off-->23f3001803@ds.study.iitm.ac.in<!--/email_off--></p>
+    <p>GitHub: <a href="https://github.com/23f3001803">github.com/23f3001803</a></p>
+  </section>
+
+  <footer>Built as a single static HTML page and hosted on GitHub Pages.</footer>
+</main>
+</body>
+</html>
